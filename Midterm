@@ -1,0 +1,106 @@
+//Ben Alday MidTerm
+import java.util.Scanner;
+
+public class OddEvenGame 
+{
+	public static void main(String args[])
+	{
+		
+		Scanner input = new Scanner(System.in); 
+		
+		int i = 0;
+		int userTries [] = new int [100];
+		String Winner [] = new String [100];
+		          
+		int userTried = 0;
+		int winner = 0; 
+		
+		int userGuess = 0;
+		int tries = 0;
+		int userWins = 0;
+		int computerWins = 0;
+		int rounds = 1;
+	
+		do
+		{
+		
+		int computerNumber = 1 + (int) ( Math.random() * 10);
+		System.out.print("Did The Computer Generate Odd Or Even: Press 1 For Odd And 2 For Even ");
+		userGuess = input.nextInt();
+		
+		if(userGuess == 1 && computerNumber % 2 != 0 || userGuess == 0 && computerNumber % 2 == 0 )
+		{
+		
+			System.out.println("You Guessed Correct");
+			userWins++;
+			Winner[winner] = "User"; 
+		}
+			else if(userGuess == 1 && computerNumber % 2 == 0 || userGuess == 0 && computerNumber % 2 != 0) 
+			{
+				
+				System.out.println("You Guessed wrong");
+				computerWins++;
+				Winner[winner] = "The Computer";
+			}
+			
+		System.out.println("Would You Like To Play Again? 1 for yes, 2 for no");
+		userGuess = input.nextInt();
+		
+		tries++;
+		userTries [userTried] = userGuess;
+			
+			
+		}while( userGuess != 2);
+		
+  		
+  		System.out.println("You Played This Game " + tries + " times.");
+        
+        if (userWins ==  computerWins )
+        {
+               
+                System.out.println("Its a Draw");
+                System.out.println("You both won " + computerWins + " time.");
+        }
+        else if (userWins > computerWins)
+        {
+                System.out.println("You Won");
+                System.out.println(" " + userWins + " time.");
+                Winner[winner] = "User";
+                
+        }
+        
+        else
+        {
+                System.out.println("You Lose");
+                System.out.println("The Computer Won " + computerWins + " time.");
+                Winner[winner] = "The Computer";
+        }
+        
+        System.out.println(" ");
+        
+        System.out.println("These Are The Stats For Each Game ");
+        
+        for(i=0; i < tries; i++)
+        {
+            
+            System.out.println("Game "+ rounds);
+            System.out.println("User Picked: " + userTries[i]);
+            System.out.println("Overall Winner:"  + Winner[i]);
+            System.out.println(" ");
+            
+            rounds++;
+    }
+        
+        
+        
+        
+   
+
+  		
+		System.out.println("Thank You For Playing");
+			
+		} 
+			
+}
+		
+		
