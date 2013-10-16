@@ -1,0 +1,32 @@
+//Ben Alday
+import java.util.Scanner;
+
+public class BonusMidterm
+  {
+        public static void main(String args[])
+        {
+                Scanner input = new Scanner(System.in);
+                
+                int m = 1;
+                int f = 1;
+                int n;
+                
+                System.out.println(" Input A Number Equal To Or Greater Than One ");
+                
+                n = input.nextInt();
+                
+
+                
+                  while (m != n)
+                  {
+                        
+                         f = f*m;
+                          m = m +1;
+                        
+                  }
+                
+          System.out.println(f);
+                
+                
+        }
+}
