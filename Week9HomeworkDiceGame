@@ -3,6 +3,36 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Dice
+{
+        
+        private int m_val;
+		private Scanner input;
+        
+      
+        
+        
+        public void diceguess()
+        {
+        	input = new Scanner(System.in);
+        	String userNum;
+            String userChoice;
+            
+            int compRoll [] = new int [100];
+            String winner [] = new String [100];
+   
+            int compRollNum = 0;
+            int gameWinner = 0;
+           
+            int i = 0;
+            int rounds = 1;
+            int gameCount = 0;
+            int compWins = 0;
+            int userWins = 0;
+                
+               do
+             {
+            	  
+    
                  Random generator = new Random();
                  int num = generator.nextInt(5);
                  m_val = num;
