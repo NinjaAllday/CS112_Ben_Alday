@@ -1,0 +1,14 @@
+public class OddEven 
+{ 
+    public void displayMessageOdd()
+    {
+            System.out.println("Odd");
+            System.out.println("");
+    }
+    
+    public void displayMessageEven(){
+            
+            System.out.println("Even");
+    }
+
+}
