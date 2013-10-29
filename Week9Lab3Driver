@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class DriverOddEven 
+{
+        public static void main(String[] args )
+        {
+                Scanner input = new Scanner(System.in);
+                
+                OddEven OddEvenObject = new OddEven(10);
+                
+                OddEvenObject.oddeven();       
+        }
+}
