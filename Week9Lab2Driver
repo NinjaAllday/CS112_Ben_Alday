@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+
+public class DriverOddEven 
+{
+    public static void main(String[] args )
+    {
+        Scanner input = new Scanner(System.in);
+        
+        OddEven myOddEven = new OddEven();
+        
+        System.out.println("Enter an integer: ");
+        int value = input.nextInt();
+        myOddEven.setValue(value);
+        System.out.println( myOddEven.oddeven() );
+        
+    }
+}
