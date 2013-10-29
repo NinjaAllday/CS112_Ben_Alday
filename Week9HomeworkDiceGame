@@ -1,0 +1,117 @@
+//Ben Alday
+import java.util.Random;
+import java.util.Scanner;
+
+public class Dice
+{
+        
+        private int m_val;
+		private Scanner input;
+        
+      
+        
+        
+        public void diceguess()
+        {
+        	input = new Scanner(System.in);
+        	String userNum;
+            String userChoice;
+            
+            int compRoll [] = new int [100];
+            String winner [] = new String [100];
+   
+            int compRollNum = 0;
+            int gameWinner = 0;
+           
+            int i = 0;
+            int rounds = 1;
+            int gameCount = 0;
+            int compWins = 0;
+            int userWins = 0;
+                
+               do
+             {
+            	  
+    
+                 Random generator = new Random();
+                 int num = generator.nextInt(5);
+                 m_val = num;
+                 System.out.println("Guess What Number The Computer Rolled On A Six Sided Dice (zero is one of the values)");
+                 System.out.println("Enter 0, 1, 2, 3, 4, or 5");
+                 userNum = input.next();
+                
+                
+                System.out.println(m_val);
+                if (m_val == 0 && userNum.equals("0") || m_val == 1 && userNum.equals("1") || m_val == 2 && userNum.equals("2") || m_val == 3 && userNum.equals("3") || m_val == 4 && userNum.equals("4") || m_val == 5 && userNum.equals("5"))
+                {
+                        System.out.println( "You Win!");
+                        userWins++;
+                        winner[gameWinner] = "User";
+                }
+                else
+                {
+                        System.out.println( "You Lose!");
+                        compWins++;
+                        winner[gameWinner] = "Computer";
+                }
+                compRoll [compRollNum] = m_val;
+              
+     
+                compRollNum++;
+                gameCount++;
+                gameWinner++;
+               
+                	System.out.println("Do you want to play again? Press Y for yes or N for no: ");
+                	userChoice = input.next();
+                	if(userChoice == "Y" || userChoice == "y" )
+                	{
+                		
+                		
+                	}
+                
+                } while(userChoice.equalsIgnoreCase("y"));
+                
+               System.out.println(" ");
+               
+               if (userWins == compWins )
+               {
+                      
+                       System.out.println("Its a Draw");
+                       System.out.println("You both won " + compWins + " time.");
+               }
+               else if (userWins > compWins)
+               {
+                       System.out.println("You Won");
+                       System.out.println(" " + userWins + " times.");
+                       winner[gameWinner] = "User";
+                       
+               }
+               
+               else
+               {
+                       System.out.println("You Lose");
+                       System.out.println("The Computer Won " + compWins + " times.");
+                       winner[gameWinner] = "The Computer";
+               }
+               
+        
+        	 System.out.println(" ");
+             
+             System.out.println("The Stats of The Game ");
+             
+             
+             for(i=0; i < gameCount; i++)
+             {
+            	 
+                 System.out.println("Game "+ rounds);
+                 System.out.println("Computer rolled: " +compRoll [i]);
+                 System.out.println("Game Winner: " + winner[i]);
+                 System.out.println("\t\t");
+                 
+                 rounds++;
+                
+             }
+		
+             System.out.println("Thank You For Playing");
+        }
+  }
