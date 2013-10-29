@@ -1,0 +1,12 @@
+
+public class DriverOddEven 
+{
+    public static void main(String[] args ){
+        
+        OddEven myOddEven = new OddEven();
+        
+        myOddEven.displayMessageOdd();
+        myOddEven.displayMessageEven();
+}
+
+}
