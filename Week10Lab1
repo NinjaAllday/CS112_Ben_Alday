@@ -1,0 +1,15 @@
+
+import java.util.Scanner;
+public class DriverDice 
+
+{
+	
+	public static void main(String[] args )
+    {
+		Scanner input = new Scanner(System.in);
+	
+		Dice DiceObject = new Dice();
+        System.out.println(DiceObject.Throw());
+        System.out.println(DiceObject.Value());
+    }
+}
