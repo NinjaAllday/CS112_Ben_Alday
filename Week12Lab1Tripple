@@ -1,0 +1,23 @@
+//Ben Alday
+public class TrippleDice extends Dice
+{
+	public TrippleDice()
+	{
+		super();
+	
+	}
+
+	@Override
+	public int Throw() 
+	{
+		return 3;
+	}
+
+
+    @Override
+    public String toString()
+    {
+            return String.format("Value For TrippleDice Is  " +Throw());     
+    }
+		
+}
