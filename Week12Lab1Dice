@@ -1,0 +1,15 @@
+//Ben Alday
+public abstract class Dice 
+{
+	private int num;
+	
+	
+	public Dice()
+	{
+		num = 0;
+		
+	}
+	
+	public abstract int Throw();
+	
+}
