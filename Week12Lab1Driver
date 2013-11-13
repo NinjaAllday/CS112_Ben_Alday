@@ -1,0 +1,14 @@
+//Ben Alday
+public class DriverDice 
+{
+	public static void main(String[] args)
+	
+	{
+		  DoubleDice d_dice = new DoubleDice();
+	      TrippleDice t_dice = new TrippleDice();
+	        
+	        
+	        System.out.println("DoubleDice " + d_dice+"\nTrippledice " + t_dice);
+	}
+
+}
