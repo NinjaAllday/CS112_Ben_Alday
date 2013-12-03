@@ -1,0 +1,10 @@
+ //Ben Alday Week13Lab1 
+public interface tester
+ 
+ {
+
+     int getNumber();
+     
+     String getHistory();
+
+ }
