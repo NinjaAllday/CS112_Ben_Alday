@@ -1,0 +1,25 @@
+//Ben Alday Week13Lab1
+public class Card implements tester
+{
+    int history[] = new int[100];
+    int count=0;
+    
+    @Override
+    public int getNumber()
+    {
+       int num= (int)(Math.random()*13);
+       history[count] = num;
+       count++;
+       return num;
+    }
+    @Override
+    	public String getHistory()
+    	{
+          String result = "Card: ";
+        	for (int i=0;i<count;i++)
+        	{
+            result += history[i] + " ";
+        	}
+        	return result;
+    }
+}
