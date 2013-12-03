@@ -1,0 +1,19 @@
+//Ben Alday Week13Lab1
+public class Testlab1 
+{
+	public static void main(String[] args) 
+	{
+        tester[] intObjects = new tester[2];
+        intObjects[0] = new Dice();
+        intObjects[1] = new Card();
+       
+        for (tester current : intObjects)
+        {
+            int num = current.getNumber();
+            System.out.println("Method Number Of "+ num);
+            System.out.println("History Number Of "+ current.getHistory());
+        }
+               
+    }
+
+}
