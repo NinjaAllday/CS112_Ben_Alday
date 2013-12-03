@@ -1,0 +1,28 @@
+//Ben Alday Week13Lab1
+	public class Dice implements tester
+	{
+	   
+		int history[] = new int[100];
+	    int count=0;
+	   
+	    @Override
+	    public int getNumber()
+	    {
+	        int num = ((int)(Math.random()*6));
+	        history[count]=num;
+	        count++;
+	        return num;
+	    }
+	    
+	    @Override
+	    public String getHistory()
+	    {
+	        String result = "Dice: ";
+	        for (int i=0;i<count;i++)
+	        {
+	            result += history[i] + "";
+	        }
+	        return result;
+	    }
+	}
+	
